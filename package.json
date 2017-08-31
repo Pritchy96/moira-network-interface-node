@@ -1,0 +1,19 @@
+{
+  "name": "moira-network-interface",
+  "version": "0.0.2",
+  "description": "The Node NI for MOIRA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pritchy96/moira-network-interface-node.git"
+  },
+  "author": "Tom Pritchard",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/Pritchy96/moira-network-interface-node/issues"
+  },
+  "homepage": "https://github.com/Pritchy96/moira-network-interface-node#readme"
+}
