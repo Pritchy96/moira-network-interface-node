@@ -1,6 +1,6 @@
 var http = require('http');
 
-var config = require("../moira.conf");
+var config = require("../../moira.conf");
 
 //Path is the path to the request from root, including query string
 //Method is the HTTP request type: GET, POST, etc
