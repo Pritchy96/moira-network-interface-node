@@ -61,3 +61,4 @@ typings/
 filestore
 
 *.conf.js
+tag_types.js

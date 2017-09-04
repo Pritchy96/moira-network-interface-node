@@ -24,7 +24,7 @@ var fs = require('fs');
 
         content += `\n}\n`;
 
-        fs.writeFile("./tag_types.js", content, function(err) {
+        fs.writeFile(`${__dirname}/tag_types.js`, content, function(err) {
           if(err) {
               return console.log(err);
           }
