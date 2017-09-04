@@ -13,6 +13,7 @@ var fs = require('fs');
           content +=
             `\t${tag_type.name}: {\n`
           + `\t\ttag_table_type: '${tag_type.tag_table_type}',\n`
+          + `\t\ttag_type_ID: '${tag_type.tag_type_ID}',\n`
           + `\t\tcreation_date: '${tag_type.creation_date}'\n`
           + `\t}`;
 
