@@ -14,8 +14,7 @@ exports.request = function(path, method, callback, postData) {
     method: method
   };
 
-  //TODO: Genericify this.
-  var jsonNode = JSON.stringify(postData);
+  var jsonData = JSON.stringify(postData);
 
   console.log("OPTION TYPE IS: " + connectionOptions.method);
   if (connectionOptions.method == 'POST') {
@@ -23,7 +22,7 @@ exports.request = function(path, method, callback, postData) {
     console.log(postData);
     connectionOptions.headers = {
         "Content-Type": "application/json",
-        'Content-Length': Buffer.byteLength(jsonNode)
+        'Content-Length': jsonData ? Buffer.byteLength(jsonData) : 0
     }
   } else {
     connectionOptions.headers = {}
@@ -56,8 +55,8 @@ exports.request = function(path, method, callback, postData) {
     //TODO: Error handling.
   });
 
-  if (connectionOptions.method == 'POST') {
-    req.write(jsonNode);
+  if (connectionOptions.method == 'POST' && jsonData) {
+    req.write(jsonData);
   }
   req.end();
 }
