@@ -5,7 +5,7 @@ var config = require("../../moira.conf");
 //Path is the path to the request from root, including query string
 //Method is the HTTP request type: GET, POST, etc
 //Callback is a method which is called with the response data after all data has been recieved
-exports.request = function(path, method, callback, postData) {
+exports.request = function(path, method, postData, callback) {
 
   var connectionOptions = {
     hostname: config.moira.ni.hostname,

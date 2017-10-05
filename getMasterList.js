@@ -9,12 +9,12 @@ var fs = require('fs');
       connection.request(`/getMasterList`, `GET`, (response) => {
         var content = "module.exports = {\n"
 
-        response.forEach((tag_type, index, array) => {
+        response.forEach((tagType, index, array) => {
           content +=
-            `\t${tag_type.name}: {\n`
-          + `\t\ttag_table_type: '${tag_type.tag_table_type}',\n`
-          + `\t\ttag_type_ID: '${tag_type.tag_type_ID}',\n`
-          + `\t\tcreation_date: '${tag_type.creation_date}'\n`
+            `\t${tagType.name}: {\n`
+          + `\t\ttag_table_type: '${tagType.tagTableType}',\n`
+          + `\t\ttag_type_id: '${tagType.tagTypeId}',\n`
+          + `\t\tcreation_date: '${tagType.creationDate}'\n`
           + `\t}`;
 
           if (index !== array.length-1) {
